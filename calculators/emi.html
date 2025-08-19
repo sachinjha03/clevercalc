@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./calculators.css" />
+    <style>
+      .progress-bar {
+        width: 100%;
+        appearance: none;
+        height: 5px;
+        border-radius: 20px;
+        background: linear-gradient(
+          to right,
+          green 0%,
+          green var(--percent, 0%),
+          gainsboro var(--percent, 0%),
+          gainsboro 100%
+        );
+      }
+      .progress-bar::-webkit-slider-thumb {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 50%;
+        border: 2px solid green;
+        cursor: pointer;
+        transform: translateY(-6px);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-left">
+        <h4>CleverCalc</h4>
+      </div>
+      <nav class="header-right">
+        <a href="../index.html">Home</a>
+        <a href="../about/about.html">About</a>
+        <div class="calculators">
+          <p>Calculators</p>
+          <div class="drop-down">
+            <a href="./sip.html">SIP Calculator</a>
+            <a href="#">EMI Calculator</a>
+            <a href="">FD Calculator</a>
+            <a href="">XYZ Calculator</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="calculator-landing-section">
+      <div class="calculator-landing-section-top">
+        <h3><span>EMI</span> Calculator</h3>
+      </div>
+      <div class="calculator-landing-section-bottom">
+        <div class="calculator">
+          <!-- Loan Amount -->
+          <div class="input-box">
+            <div class="input-box-top">
+              <p>Loan Amount</p>
+              <p class="progress-value">Rs. 500000</p>
+            </div>
+            <div class="input-box-bottom">
+              <input
+                type="range"
+                min="10000"
+                max="1000000"
+                value="50000"
+                step="5000"
+                class="progress-bar"
+              />
+            </div>
+          </div>
+
+          <!-- Interest Rate -->
+          <div class="input-box">
+            <div class="input-box-top">
+              <p>Annual Interest Rate</p>
+              <p class="progress-value">8%</p>
+            </div>
+            <div class="input-box-bottom">
+              <input
+                type="range"
+                min="1"
+                max="20"
+                value="8"
+                step="0.1"
+                class="progress-bar"
+              />
+            </div>
+          </div>
+
+          <!-- Loan Tenure -->
+          <div class="input-box">
+            <div class="input-box-top">
+              <p>Loan Tenure (Years)</p>
+              <p class="progress-value">10</p>
+            </div>
+            <div class="input-box-bottom">
+              <input
+                type="range"
+                min="1"
+                max="30"
+                value="10"
+                step="1"
+                class="progress-bar"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result">
+          <h4>EMI Details</h4>
+          <canvas id="emiDonutChart" width="200" height="200"></canvas>
+          <div class="return-data">
+            <p>Monthly EMI : Rs. <span id="emiAmount">0</span>/-</p>
+            <p>Total Interest : Rs. <span id="totalInterest">0</span>/-</p>
+            <p>Total Payment : Rs. <span id="totalPayment">0</span>/-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="about-page-main-section">
+      <div class="about-page-main-section-left">
+        <div class="about-page-sub-sections">
+          <h3>EMI Calculator – Monthly EMI Calculator</h3>
+          <p>
+            Prospective investors can think that SIPs and mutual funds are the
+            same. However, SIPs are merely a method of investing in mutual
+            funds, the other method being a lump sum. A SIP calculator is a tool
+            that helps you determine the returns you can avail when parking your
+            funds in such investment tools. Systematic Investment Plan or SIP is
+            a process of investing a fixed sum of money in mutual funds at
+            regular intervals. SIPs usually allow you to invest weekly,
+            quarterly, or monthly. 
+          </p>
+        </div>
+        <div class="about-page-sub-sections">
+          <h3>What is EMI Calculator</h3>
+          <p>
+            A SIP calculator is a simple tool that allows individuals to get an
+            idea of the returns on their mutual fund investments made through
+            SIP. SIP investments in mutual funds have become one of the most
+            popular investment options for millennials lately.
+          </p>
+          <p>
+            These mutual fund sip calculators are designed to give potential
+            investors an estimate on their mutual fund investments. However, the
+            actual returns offered by a mutual fund scheme varies depending on
+            various factors. The SIP calculator does not provide clarification
+            for the exit load and expense ratio (if any).
+          </p>
+          <p>
+            These mutual fund sip calculators are designed to give potential
+            investors an estimate on their mutual fund investments. However, the
+            actual returns offered by a mutual fund scheme varies depending on
+            various factors. The SIP calculator does not provide clarification
+            for the exit load and expense ratio (if any).
+          </p>
+        </div>
+        <div class="about-page-sub-sections">
+          <h3>EMI Calculator – Systematic Investment Plan Calculator</h3>
+          <p>
+            Prospective investors can think that SIPs and mutual funds are the
+            same. However, SIPs are merely a method of investing in mutual
+            funds, the other method being a lump sum. A SIP calculator is a tool
+            that helps you determine the returns you can avail when parking your
+            funds in such investment tools. Systematic Investment Plan or SIP is
+            a process of investing a fixed sum of money in mutual funds at
+            regular intervals. SIPs usually allow you to invest weekly,
+            quarterly, or monthly. 
+          </p>
+        </div>
+      </div>
+      <div class="about-page-main-section-right">
+        <div class="about-page-sub-sections">
+          <h3>Explore Other Calculators As Well</h3>
+          <a href="">&gt; Calculator Name 1</a>
+          <a href="">&gt; Calculator Name 2</a>
+          <a href="">&gt; Calculator Name 3</a>
+          <a href="">&gt; Calculator Name 4</a>
+          <a href="">&gt; Calculator Name 5</a>
+          <a href="">&gt; Calculator Name 6</a>
+        </div>
+        <div class="about-page-sub-sections">
+          <h3>How can a EMI return calculator help you?</h3>
+          <p>
+            SIPs are a more lucrative mode of investing funds compared to a lump
+            sum amount according to several mutual fund experts. It helps you
+            become financially disciplined and create a habit of savings that
+            can benefit you in the future. A SIP calculator online is a
+            beneficial tool, which shows the estimated returns you will earn
+            after the investment tenure.
+          </p>
+          <p>Few of the benefits of SIP calculators include –</p>
+          <ul>
+            <li>Assists you to determine the amount you want to invest in.</li>
+            <li>Tells you the total amount you have invested.</li>
+            <li>Gives an estimated value of the returns.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <img src="../images/plant-group.png" alt="">
+      </div>
+      <div class="footer-bottom">
+        <p><span>CleverCalc</span> | All Right Reserved 2025 &copy;</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const inputs = document.querySelectorAll(".progress-bar");
+      const progressValues = document.querySelectorAll(".progress-value");
+
+      const emiAmountEl = document.getElementById("emiAmount");
+      const totalInterestEl = document.getElementById("totalInterest");
+      const totalPaymentEl = document.getElementById("totalPayment");
+
+      const ctx = document.getElementById("emiDonutChart").getContext("2d");
+
+      let emiChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Principal Amount", "Total Interest"],
+          datasets: [
+            {
+              data: [0, 0],
+              backgroundColor: ["#007bff", "#ff5733"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return context.label + ": ₹" + context.raw.toLocaleString();
+                },
+              },
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      });
+
+      function updateProgressBar(range) {
+        const min = range.min;
+        const max = range.max;
+        const val = range.value;
+        const percent = ((val - min) / (max - min)) * 100;
+        range.style.setProperty("--percent", `${percent}%`);
+      }
+
+      function calculateEMI() {
+        let principal = parseFloat(inputs[0].value);
+        let annualRate = parseFloat(inputs[1].value);
+        let years = parseFloat(inputs[2].value);
+
+        let monthlyRate = annualRate / 12 / 100;
+        let totalMonths = years * 12;
+
+        let emi =
+          (principal * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
+          (Math.pow(1 + monthlyRate, totalMonths) - 1);
+
+        let totalPayment = emi * totalMonths;
+        let totalInterest = totalPayment - principal;
+
+        // Update values
+        emiAmountEl.textContent = emi.toFixed(2);
+        totalInterestEl.textContent = totalInterest.toFixed(2);
+        totalPaymentEl.textContent = totalPayment.toFixed(2);
+
+        // Update chart
+        emiChart.data.datasets[0].data = [principal, totalInterest];
+        emiChart.update();
+      }
+
+      function handleInputChange() {
+        inputs.forEach((input, index) => {
+          updateProgressBar(input);
+          if (index === 0) {
+            progressValues[index].textContent = "Rs. " + parseFloat(input.value);
+          } else if (index === 1) {
+            progressValues[index].textContent = parseFloat(input.value) + "%";
+          } else {
+            progressValues[index].textContent = input.value;
+          }
+        });
+        calculateEMI();
+      }
+
+      inputs.forEach((input) => {
+        input.addEventListener("input", handleInputChange);
+      });
+
+      // Initialize
+      handleInputChange();
+    </script>
+  </body>
+</html>
